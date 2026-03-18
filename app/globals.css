@@ -14,8 +14,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1b1a18;
     --foreground: #ededed;
+  }
+}
+
+html {
+  font-size: 50%;
+
+  @media (max-width: 360px) {
+    font-size: 45%;
   }
 }
 
@@ -23,4 +31,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100rem;
+  margin: 0 auto;
+}
+
+li {
+  color: #b6aeaa;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+li:hover {
+  color: #fff;
+}
+
+.icons {
+  color: #ccc;
+  display: inline-flex; /* important */
+  align-items: center;
+  justify-content: center;
+
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.icons:hover {
+  color: #fff;
 }
