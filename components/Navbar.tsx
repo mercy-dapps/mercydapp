@@ -11,7 +11,7 @@ export default function Navbar() {
               <a
                 href="/"
                 className="text-red-600 p-4"
-                title="Software Engineer"
+                title="Solana Smart Contract Developer"
               >
                 Mercy
               </a>
@@ -19,16 +19,16 @@ export default function Navbar() {
             </span>
           </div>
           <ul className="flex gap-10">
-            <li>
+            <li className="list">
               <Link href="/">Home</Link>
             </li>
-            <li>
+            <li className="list">
               <Link href="/projects">Projects</Link>
             </li>
-            <li>
+            <li className="list">
               <Link href="/blog">Blog</Link>
             </li>
-            <li>
+            <li className="list">
               <Link href="/tools">Tools</Link>
             </li>
           </ul>

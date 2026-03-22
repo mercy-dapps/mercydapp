@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: 50%;
+  font-size: 60%;
 
   @media (max-width: 360px) {
     font-size: 45%;
@@ -36,30 +36,145 @@ body {
 }
 
 .container {
-  width: 100rem;
+  width: 85rem;
   margin: 0 auto;
 }
 
-li {
+.list {
   color: #b6aeaa;
-  font-size: 1.8rem;
   cursor: pointer;
 }
 
-li:hover {
+.list:hover {
   color: #fff;
 }
 
 .icons {
   color: #ccc;
-  display: inline-flex; /* important */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .icons:hover {
   color: #fff;
+}
+
+.highlight-text {
+  text-decoration: underline;
+  opacity: 70%;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.highlight-text:hover {
+  color: #ff1b2e;
+  opacity: 100%;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+.heading {
+  font-size: 3.75rem;
+  font-weight: 800;
+  margin-bottom: 3.2rem;
+}
+
+.heading-2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #ff1b2e;
+  transition: width 0.3s;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #9a9a9a;
+}
+
+.title:hover .title-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.title-icon {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  color: #ff1b2e;
+
+  width: 2rem;
+  height: 2rem;
+}
+
+.project-title {
+  color: #ff1b2e;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-title svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #9a9a9a;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  cursor: default;
+  user-select: none;
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
