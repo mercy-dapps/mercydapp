@@ -37,6 +37,7 @@ body {
 
 .container {
   width: 85rem;
+  padding: 4rem 0;
   margin: 0 auto;
 }
 
@@ -77,6 +78,10 @@ body {
 
 section {
   margin-bottom: 5rem;
+}
+
+section:last-child {
+  margin-bottom: 2rem;
 }
 
 .heading {
@@ -142,11 +147,16 @@ section {
 
 .project-title {
   color: #ff1b2e;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.project-title p {
+  color: #ffffff !important;
+}
+
 .project-title svg {
   width: 2rem;
   height: 2rem;
