@@ -5,6 +5,13 @@ export default function page() {
         <div className="flex justify-between items-center">
           <h3 className="heading-2">Projects and Work Experiences</h3>
         </div>
+        <div className="page-summary">
+          Come explore some of the projects I have worked on, showcasing my
+          skills and experience in frontend development. At the moment, You
+          would find me working on personal Solana projects while building my
+          solana development skills. Also, I am currently undergoing a Rust
+          security bootcamp with Rektoff.
+        </div>
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-8">
@@ -75,7 +82,6 @@ export default function page() {
                 <span className="tech-tag">Typescript</span>
                 <span className="tech-tag">Sass</span>
                 <span className="tech-tag">Tailwind css</span>
-                <span className="tech-tag">Rest Api</span>
               </div>
             </div>
             <div className="flex flex-col gap-8">
@@ -97,11 +103,21 @@ export default function page() {
                   <li>Logic implementation ensuring better user experience</li>
                   <li>
                     Applications built includes:{" "}
-                    <span className="highlight-text">PlugNg</span>,{" "}
-                    <span className="highlight-text">PlugNg Event</span>,{" "}
-                    <span className="highlight-text">PlugNg Agent</span>,{" "}
-                    <span className="highlight-text">PlugNg Business</span>,{" "}
-                    <span className="highlight-text">ShopNig</span>
+                    <a href="https://app.plug.ng/" target="_blank">
+                      <span className="highlight-text">PlugNg</span>,{" "}
+                    </a>
+                    <a href="https://events.plug.ng/" target="_blank">
+                      <span className="highlight-text">PlugNg Event</span>,{" "}
+                    </a>
+                    <a href="https://agent.plug.ng/" target="_blank">
+                      <span className="highlight-text">PlugNg Agent</span>,{" "}
+                    </a>
+                    <a href="https://business.plug.ng/" target="_blank">
+                      <span className="highlight-text">PlugNg Business</span>,
+                    </a>{" "}
+                    <a href="https://shopnig.com/" target="_blank">
+                      <span className="highlight-text">ShopNig</span>
+                    </a>
                   </li>
                 </ul>
               </div>

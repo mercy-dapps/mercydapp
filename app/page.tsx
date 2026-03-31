@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import { blogPosts } from "@/blog";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -37,20 +37,27 @@ export default function Home() {
         </p>
         <p className="mb-6">
           Recently, I have been drawn towards blockchain technology with focus
-          on the Solana blockchain. My choice of blockchain was firstly due to
+          on the Solana blockchain. My choice of blockchain was first due to
           community support and engagment and then it became cemented learning
           about Solana has a fast and cheap layer 1 blockchain as well as it
           recent adoption by big companies moving to blockchain technology.
         </p>
         <p className="mb-6">
           Over the past year, I have participated in local solana hackathon by{" "}
-          <span className="highlight-text">SuperteamNG</span>, solana bootcamps
-          at <span className="highlight-text">Turbine</span> and recently
-          started documenting my challenges and project on{" "}
-          <span className="highlight-text">Medium.</span> Writing a secured
-          solana programs with Rust, Anchor, Pinocchio has always been my
-          priority thereby creating interest in security researching with the
-          aim of writing less vulnerable programs.
+          <a href="https://x.com/SuperteamNG" target="_blank">
+            <span className="highlight-text">SuperteamNG</span>
+          </a>
+          , solana bootcamps at{" "}
+          <a href="https://x.com/solanaturbine" target="_blank">
+            <span className="highlight-text">Turbine</span>
+          </a>{" "}
+          and recently started documenting my challenges and project on{" "}
+          <a href="https://medium.com/@mercyadams" target="_blank">
+            <span className="highlight-text">Medium.</span>
+          </a>{" "}
+          Writing a secured solana programs with Rust, Anchor, Pinocchio has
+          always been my priority thereby creating interest in security
+          researching with the aim of writing less vulnerable programs.
         </p>
         <p className="mb-6">
           Writing logic spikes my interest these days leading me to focus more
@@ -62,111 +69,37 @@ export default function Home() {
       <section>
         <div className="flex justify-between items-center">
           <h3 className="heading-2">Writings</h3>
-          <a href="" className="link">
+          <Link href="/blog" className="link">
             view all write-ups
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-4">
-            <h5 className="title">
-              RPC issues for Intel MacOs?{" "}
-              <svg
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="title-icon"
-              >
-                <path d="M3.293,20.707a1,1,0,0,1,0-1.414L17.586,5H12a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1v8a1,1,0,0,1-2,0V6.414L4.707,20.707a1,1,0,0,1-1.414,0Z" />
-              </svg>
-            </h5>
-            <div className="subtitle">
-              I wrote about my approach in resolving an rpc issue after days of
-              debugging with no clue before coming across the same issue on
-              github where people profer different solutions.
+          {blogPosts.slice(0, 3).map((post, index) => (
+            <div className="flex flex-col gap-4" key={index}>
+              <a href={post.link} target="_blank" rel="noopener noreferrer">
+                <h5 className="title">
+                  {post.title}{" "}
+                  <svg
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="title-icon"
+                  >
+                    <path d="M3.293,20.707a1,1,0,0,1,0-1.414L17.586,5H12a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1v8a1,1,0,0,1-2,0V6.414L4.707,20.707a1,1,0,0,1-1.414,0Z" />
+                  </svg>
+                </h5>
+              </a>
+              <div className="subtitle">{post.excerpt}</div>
             </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h5 className="title">
-              EasyHaven — Optimization (Part II){" "}
-              <svg
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="title-icon"
-              >
-                <path d="M3.293,20.707a1,1,0,0,1,0-1.414L17.586,5H12a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1v8a1,1,0,0,1-2,0V6.414L4.707,20.707a1,1,0,0,1-1.414,0Z" />
-              </svg>
-            </h5>
-            <div className="subtitle">
-              Code refactor does not end right? We keep optimizing our codebase
-              either by adding new feature or refactoring existing codebase. In
-              this article, I refactored some of the existing code after finding
-              better ways of doing things.
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h5 className="title">
-              EasyHaven — A decentralized housing/property management
-              eliminating middle-men{" "}
-              <svg
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="title-icon"
-              >
-                <path d="M3.293,20.707a1,1,0,0,1,0-1.414L17.586,5H12a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1v8a1,1,0,0,1-2,0V6.414L4.707,20.707a1,1,0,0,1-1.414,0Z" />
-              </svg>
-            </h5>
-            <div className="subtitle">
-              Building in public is something I want to do and this project seem
-              a good way to start. I decided to work on a decentralized property
-              managment platform after having faced some challenges which
-              decentralization helps solve irrespective of the location.
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h5 className="title">
-              Composability in DeFi{" "}
-              <svg
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="title-icon"
-              >
-                <path d="M3.293,20.707a1,1,0,0,1,0-1.414L17.586,5H12a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1v8a1,1,0,0,1-2,0V6.414L4.707,20.707a1,1,0,0,1-1.414,0Z" />
-              </svg>
-            </h5>
-            <div className="subtitle">
-              An article submitted for content bounties on composability in
-              Defi.
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h5 className="title">
-              What is Web3?{" "}
-              <svg
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="title-icon"
-              >
-                <path d="M3.293,20.707a1,1,0,0,1,0-1.414L17.586,5H12a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1v8a1,1,0,0,1-2,0V6.414L4.707,20.707a1,1,0,0,1-1.414,0Z" />
-              </svg>
-            </h5>
-            <div className="subtitle">
-              An article explaining the term web3 in a lane man lauguage. A go
-              to writeup to get started with the basic understanding of web3.
-              Ideal for beginners!
-            </div>
-          </div>
+          ))}
         </div>
       </section>
       <section>
         <div className="flex justify-between items-center">
           <h3 className="heading-2">Projects and Work Experiences</h3>
-          <a href="" className="link">
+          <Link href="/projects" className="link">
             view all projects
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-8">
@@ -238,7 +171,6 @@ export default function Home() {
                 <span className="tech-tag">Typescript</span>
                 <span className="tech-tag">Sass</span>
                 <span className="tech-tag">Tailwind css</span>
-                <span className="tech-tag">Rest Api</span>
               </div>
             </div>
             <div className="flex flex-col gap-8">
@@ -260,11 +192,21 @@ export default function Home() {
                   <li>Logic implementation ensuring better user experience</li>
                   <li>
                     Applications built includes:{" "}
-                    <span className="highlight-text">PlugNg</span>,{" "}
-                    <span className="highlight-text">PlugNg Event</span>,{" "}
-                    <span className="highlight-text">PlugNg Agent</span>,{" "}
-                    <span className="highlight-text">PlugNg Business</span>,{" "}
-                    <span className="highlight-text">ShopNig</span>
+                    <a href="https://app.plug.ng/" target="_blank">
+                      <span className="highlight-text">PlugNg</span>,{" "}
+                    </a>
+                    <a href="https://events.plug.ng/" target="_blank">
+                      <span className="highlight-text">PlugNg Event</span>,{" "}
+                    </a>
+                    <a href="https://agent.plug.ng/" target="_blank">
+                      <span className="highlight-text">PlugNg Agent</span>,{" "}
+                    </a>
+                    <a href="https://business.plug.ng/" target="_blank">
+                      <span className="highlight-text">PlugNg Business</span>,
+                    </a>{" "}
+                    <a href="https://shopnig.com/" target="_blank">
+                      <span className="highlight-text">ShopNig</span>
+                    </a>
                   </li>
                 </ul>
               </div>
