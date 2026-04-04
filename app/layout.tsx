@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mercy Adams - Becoming a better version of me, one step at a time",
   description:
-    "A Software engineer with focus on building on the Solana blockchain. Actively building and learning about Rust, Anchor, Pinocchio and more.",
+    "A developer with focus on building on the Solana blockchain. Actively building and learning about Rust, Anchor, Pinocchio and more.",
 };
 
 export default function RootLayout({
