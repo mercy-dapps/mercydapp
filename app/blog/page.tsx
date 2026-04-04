@@ -1,10 +1,10 @@
-import { blogPosts } from "@/blog";
+import { blogPosts } from "@/data";
 
 export default function page() {
   return (
-    <main className="container">
+    <main className="wrapper">
       <section>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-8">
           <h3 className="heading-2">Writings</h3>
         </div>
         <div className="page-summary">

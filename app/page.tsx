@@ -1,9 +1,9 @@
-import { blogPosts } from "@/blog";
+import { blogPosts, socialLinks } from "@/data";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container">
+    <main className="wrapper">
       <section>
         <div className="float-left mr-8 mb-8">
           <div className="w-64 h-64 rounded-xl overflow-hidden shadow-lg border-4 border-red-600">
@@ -16,7 +16,20 @@ export default function Home() {
           </div>
         </div>
         <h3 className="heading">Mercy Adams</h3>
-        <p className="text-red-600 text-[1.8rem] mb-8 block">
+        <div className="flex md:hidden items-center gap-1 w-fit px-4 py-2 mb-4 rounded-full bg-white/3 hover:bg-white/6 transition-colors duration-200">
+          {socialLinks.map(({ href, title, icon }) => (
+            <a
+              key={title}
+              href={href}
+              title={title}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 p-1.5 text-[#cccccc] hover:text-white transition-colors duration-200 rounded-md hover:bg-white/10"
+              dangerouslySetInnerHTML={{ __html: icon }}
+            ></a>
+          ))}
+        </div>
+        <p className="text-red-600 text-2xl md:text-3xl mb-8 block">
           {"<"}
           <span className="text-white font-semibold italic p-4">
             Solana Smart Contract Developer and Frontend Developer
@@ -67,7 +80,7 @@ export default function Home() {
         </p>
       </section>
       <section>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center  mb-8">
           <h3 className="heading-2">Writings</h3>
           <Link href="/blog" className="link">
             view all write-ups
@@ -95,8 +108,8 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="flex justify-between items-center">
-          <h3 className="heading-2">Projects and Work Experiences</h3>
+        <div className="flex justify-between items-center mb-8">
+          <h3 className="heading-2">Projects</h3>
           <Link href="/projects" className="link">
             view all projects
           </Link>

@@ -1,8 +1,8 @@
 export default function page() {
   return (
-    <main className="container">
+    <main className="wrapper">
       <section>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-8">
           <h3 className="heading-2">Projects and Work Experiences</h3>
         </div>
         <div className="page-summary">
@@ -27,7 +27,7 @@ export default function page() {
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-4">
                 <a
-                  href=""
+                  href="https://github.com/mercy-dapps/easyhaven"
                   title="github"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export default function page() {
               </div>
               <div className="flex flex-col gap-4">
                 <a
-                  href=""
+                  href="https://github.com/mercy-dapps/soundhaven"
                   title="github"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,16 +86,10 @@ export default function page() {
             </div>
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-4">
-                <a
-                  href=""
-                  title="github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-title"
-                >
+                <div className="project-title">
                   <p>Wiseki Technologies </p>
                   <span>2023 - present</span>
-                </a>
+                </div>
                 <ul className="list-inside list-disc flex flex-col gap-4">
                   <li>
                     Resposible for building production ready web user interfaces
