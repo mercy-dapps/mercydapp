@@ -77,7 +77,7 @@ export default function page() {
           </div>
           <div className="flex flex-col gap-8">
             <h5 className="title title--tool cursor-default!">
-              Exploring Rpositories:
+              Exploring Repositories:
             </h5>
             <div className="flex flex-col gap-2">
               <ul>
