@@ -32,7 +32,7 @@ export const blogPosts = [
   },
 ];
 
-export const projects = {
+export const sideProjects = {
   rust: [
     {
       title: "Tik - A cli task manager",
@@ -93,7 +93,7 @@ export const learning = [
   "pinocchio",
   "security researching",
   "rust advanced concepts",
-  "litesvm - for solana testing",
+  "litesvm",
   "AI tools for development",
   "magic block",
 ];
@@ -141,8 +141,29 @@ export const socialLinks = [
 ];
 
 export const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
-    { href: "/blog", label: "Blog" },
-    { href: "/tools", label: "Tools" },
-  ];
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
+  { href: "/tools", label: "Tools" },
+];
+
+export const projects = [
+  {
+    name: "EasyHaven",
+    description:
+      "A decentralized application that connects buyer/tenant with owner of property (house) eliminating middle-men in a trustless, secure and fast way.",
+    githubLink: "https://github.com/mercy-dapps/easyhaven",
+  },
+  {
+    name: "Neatly",
+    description:
+      "A clean, fast CLI tool that organises files in a directory by sorting them into subfolders based on their file type. Built with Rust.",
+    githubLink: "https://github.com/mercy-dapps/neatly",
+  },
+  {
+    name: "Tik",
+    description:
+      "A minimal CLI task manager built with Rust. Track your tasks straight from the terminal.",
+    githubLink: "https://github.com/mercy-dapps/tik",
+  },
+];

@@ -1,4 +1,4 @@
-import { projects, tools, learning, exploring } from "@/data";
+import { learning, exploring } from "@/data";
 
 export default function page() {
   return (
@@ -10,56 +10,19 @@ export default function page() {
         <div className="page-summary">
           As a developer, there is no end to the tools we use. Learning how to
           use tools for more efficiency and productivity is becoming inevitable
-          as well. I have listed below tools I use often and rarely. I am
-          however able to work with any of these tools if the need arises. My
-          frontend skils majorly revolves around React, Nextjs, Typescript,
-          Sass, Tailwind Css while Solana skills revolves around but not limited
-          to Rust, Anchor, Pinocchio.
+          as well. I have listed below tools I use often and rarely. I am able
+          to work with any of these tools and pick up new ones if the need
+          arises. My frontend skils majorly revolves around{" "}
+          <span className="tool-lang">Nextjs</span>,{" "}
+          <span className="tool-lang">Typescript</span>,{" "}
+          <span className="tool-lang">Sass</span>,{" "}
+          <span className="tool-lang">Tailwind Css</span> while Solana skills
+          revolves around but not limited to{" "}
+          <span className="tool-lang">Rust</span>,{" "}
+          <span className="tool-lang">Anchor</span>,{" "}
+          <span className="tool-lang">Pinocchio</span>.
         </div>
         <div className="flex flex-col gap-16">
-          <div className="flex flex-col gap-8">
-            {tools.map((tool, index) => (
-              <div className="flex flex-col gap-4" key={index}>
-                <h5 className="title title--tool text-[#ff1b2e]!">
-                  {tool.title}
-                </h5>
-                <p>{tool.usage}</p>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-col gap-8">
-            <h5 className="title title--tool cursor-default!">
-              Side projects that was fun working on
-            </h5>
-            {Object.entries(projects).map(([category, projects], index) => (
-              <div className="flex flex-col gap-8" key={index}>
-                <h5 className="border rounded-xl px-4 py-2 w-fit font-bold text-2xl text-[#9a9a9a]">
-                  {category}
-                </h5>
-                {projects.map((project, index) => (
-                  <div className="flex flex-col gap-4" key={index}>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <h5 className="title title--tool font-normal!">
-                        {project.title}{" "}
-                        <svg
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="title-icon"
-                        >
-                          <path d="M3.293,20.707a1,1,0,0,1,0-1.414L17.586,5H12a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1v8a1,1,0,0,1-2,0V6.414L4.707,20.707a1,1,0,0,1-1.414,0Z" />
-                        </svg>
-                      </h5>
-                    </a>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
           <div className="flex flex-col gap-8">
             <h5 className="title title--tool cursor-default!">Learning:</h5>
             <div className="flex flex-col gap-2">
@@ -67,7 +30,7 @@ export default function page() {
                 {learning.map((l, index) => (
                   <li
                     key={index}
-                    className="list-disc! list-inside capitalize font-bold"
+                    className="list-disc! list-inside capitalize"
                   >
                     {l}
                   </li>

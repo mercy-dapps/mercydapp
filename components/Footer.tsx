@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className=" border-t border-[#525252]">
+    <footer className="border-t border-[#525252]">
       <div className="flex flex-col items-center justify-center gap-4 p-20  text-2xl">
         <p className="text-center">
           <span className="text-[#ff1b2e]">&copy;</span>{" "}
